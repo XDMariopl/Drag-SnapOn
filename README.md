@@ -2,9 +2,9 @@
 Drag and drop, snap on practice
 
 ## Task list
-- [ ] Drag and drop objects anywhere on the play field
-- [ ] Reset on incorrect area
+- [x] Drag and drop objects anywhere on the play field
+- [x] Reset on incorrect area
 - [ ] change rotation on z axis
 - [ ] change height y
 - [ ] change width x
-- [ ] SFX
+- [x] SFX
