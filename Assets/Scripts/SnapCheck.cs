@@ -44,6 +44,33 @@ public class SnapCheck : MonoBehaviour,IDropHandler {
                         case "Bus":
                             objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[3]);
                             break;
+                        case "B2":
+                            objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[4]);
+                            break;
+                        case "E46":
+                            objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[11]);
+                            break;
+                        case "E61":
+                            objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[4]);
+                            break;
+                        case "Police":
+                            objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[6]);
+                            break;
+                        case "Cement":
+                            objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[10]);
+                            break;
+                        case "Tracktor1":
+                            objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[7]);
+                            break;
+                        case "Tracktor2":
+                            objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[8]);
+                            break;
+                        case "Firetruck":
+                            objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[11]);
+                            break;
+                        case "Excavator":
+                            objektuskripts.audioSource.PlayOneShot(objektuskripts.audioClips[9]);
+                            break;
                     }
                 }
             }
@@ -62,6 +89,33 @@ public class SnapCheck : MonoBehaviour,IDropHandler {
                         break;
                     case "Bus":
                         objektuskripts.Bus.GetComponent<RectTransform>().localPosition=objektuskripts.BusPos;
+                        break;
+                    case "B2":
+                        objektuskripts.B2.GetComponent<RectTransform>().localPosition = objektuskripts.B2Pos;
+                        break;
+                    case "E46":
+                        objektuskripts.E46.GetComponent<RectTransform>().localPosition = objektuskripts.E46Pos;
+                        break;
+                    case "E61":
+                        objektuskripts.E61.GetComponent<RectTransform>().localPosition = objektuskripts.E61Pos;
+                        break;
+                    case "Police":
+                        objektuskripts.Police.GetComponent<RectTransform>().localPosition = objektuskripts.PolicePos;
+                        break;
+                    case "Cement":
+                        objektuskripts.CementCar.GetComponent<RectTransform>().localPosition = objektuskripts.CementCarPos;
+                        break;
+                    case "Tracktor1":
+                        objektuskripts.Tracktor1.GetComponent<RectTransform>().localPosition = objektuskripts.Tracktor1Pos;
+                        break;
+                    case "Tracktor2":
+                        objektuskripts.Tracktor2.GetComponent<RectTransform>().localPosition = objektuskripts.Tracktor2Pos;
+                        break;
+                    case "Firetruck":
+                        objektuskripts.Firetruck.GetComponent<RectTransform>().localPosition = objektuskripts.FiretruckPos;
+                        break;
+                    case "Excavator":
+                        objektuskripts.Excavator.GetComponent<RectTransform>().localPosition = objektuskripts.ExcavatorPos;
                         break;
                 }
             }
