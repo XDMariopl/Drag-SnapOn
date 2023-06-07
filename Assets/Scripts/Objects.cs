@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Objects : MonoBehaviour {
 	public GameObject GarbageCar;
@@ -15,6 +16,8 @@ public class Objects : MonoBehaviour {
     public GameObject Tracktor1;
     public GameObject Tracktor2;
     public GameObject Excavator;
+    public int CountCorrectPos=0;
+    public GameObject EndScreen;
 
     [HideInInspector]
 	public Vector2 GarbageCarPos;
