@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class Drag_drop : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDragHandler {
 
@@ -45,7 +44,7 @@ public class Drag_drop : MonoBehaviour, IBeginDragHandler, IDragHandler,IEndDrag
 
     void Update() 
     {
-        if (objektuSkripts.CountCorrectPos == 3)
+        if (objektuSkripts.CountCorrectPos == 12)
         {
             TimeScript.timerActive = false;
             TimeScript.EndScreen();

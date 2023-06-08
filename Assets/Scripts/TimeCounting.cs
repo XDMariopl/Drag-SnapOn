@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,16 +8,17 @@ public class TimeCounting : MonoBehaviour {
     [HideInInspector]
     public Vector2 TimerPos;
 
-    public string currentScene =SceneManager.GetActiveScene().name;
     public Objects objektuskripts;
+
     private float TimeStart;
-    public Text txtBox;
+    public Text timeBox;
+    public Text scoreBox;
     public bool timerActive = true;
 
     void Start () 
     {
-        TimerPos = txtBox.GetComponent<RectTransform>().localPosition;
-        txtBox.text = TimeStart.ToString("F2");
+        TimerPos = timeBox.GetComponent<RectTransform>().localPosition;
+        timeBox.text = TimeStart.ToString("F2");
     }
 
     void Update () 
@@ -26,20 +26,27 @@ public class TimeCounting : MonoBehaviour {
         if (timerActive == true)
         {
             TimeStart += Time.deltaTime;
-            txtBox.text = TimeStart.ToString("F2");
+            timeBox.text = TimeStart.ToString("F2");
         }
     }
 
-    public void EndScreen()
+    public void EndScreen() 
     {
+        objektuskripts.ExitButton.SetActive(true);
+        objektuskripts.RestartButton.SetActive(true);
         objektuskripts.EndScreen.SetActive(true);
-        txtBox.transform.position = new Vector3 (0f, 30f, 0f);
-        txtBox.text += "s";
+        timeBox.transform.position = new Vector3 (0f, 30f, 0f);
+        timeBox.text += "s";
+        if (TimeStart <= 70.0f)
+        {
+            scoreBox.text += "★★★";
+        }else if(TimeStart<= 120.0f)
+        {
+            scoreBox.text += "★★_";
+        }
+        else
+        {
+            scoreBox.text += "★__";
+        }
     }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene(currentScene);
-    }
-
 }
